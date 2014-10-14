@@ -22,7 +22,7 @@ is an overview of the cookbook listing the dependancies required for it to funci
 [metrics_vagrant/my_cookbooks/rjmetrics/recipes/default.rb](https://github.com/jawnhaas/metrics_vagrant/blob/master/my_cookbooks/rjmetrics/recipes/default.rb)
 this recipe creates the connection string, database, sets permissions, and imports a SQL file for data. The SQL import is done for for the sake of the demo, so it runs without additional configuration. Normally i would not include data imports in configuration management system.
 
-[metrics_vagrant/cookbooks/rjmetrics/templates/default/site.conf.erb](https://github.com/jawnhaas/metrics_vagrant/blob/master/cookbooks/rjmetrics/templates/default/site.conf.erb)
+[metrics_vagrant/my_cookbooks/rjmetrics/templates/default/site.conf.erb](https://github.com/jawnhaas/metrics_vagrant/blob/master/my_cookbooks/rjmetrics/templates/default/site.conf.erb)
 is a ruby erb template that is used to setup the vhost document root set via the Vagrantfile.
 
 ## Requirements ##
