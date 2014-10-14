@@ -39,8 +39,8 @@ is a ruby erb template that is used to setup the vhost document root set via the
 
 
 	git clone https://github.com/jawnhaas/metrics_vagrant.git
-    cd metrics_vagrant
-    vagrant plugin install vagrant-omnibus
-    vagrant up
+    	cd metrics_vagrant
+    	vagrant plugin install vagrant-omnibus
+    	vagrant up
 
 Open up http://localhost:8080 in a browser.
