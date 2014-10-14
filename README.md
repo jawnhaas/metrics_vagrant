@@ -35,8 +35,8 @@ is a ruby erb template that is used to setup the vhost document root set via the
 ## Setup ##
 First clone the metrics_example repository, and make that your working directory.
 
-	git clone https://github.com/jawnhaas/metrics_example.git
-    cd metrics_example
+	git clone https://github.com/jawnhaas/metrics_vagrant.git
+    cd metrics_vagrant
     vagrant plugin install vagrant-omnibus
     vagrant up
 
