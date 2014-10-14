@@ -5,27 +5,27 @@ This is a sample Vagrant configuration which provisions a server instance with P
 All files referenced are documented throughout, below is an overview of each file touched. To make the project easy to run, I manually downloaded all the cookbook dependancies. Normally, I would use a package management system like Library or Berkshire. 
 
 #### Vagrantfile ####
-[metrics_vagrant/Vagrantfile](https://github.com/jawnhaas/metrics_vagrant/blob/master/Vagrantfile)
+[Vagrantfile](https://github.com/jawnhaas/metrics_vagrant/blob/master/Vagrantfile)
 sets some configuration values in the chef.json section, sets document paths and base VM configuration.
 
-[metrics_vagrant/Vagrantfile.chef](https://github.com/jawnhaas/metrics_vagrant/blob/master/Vagrantfile.chef)
+[Vagrantfile.chef](https://github.com/jawnhaas/metrics_vagrant/blob/master/Vagrantfile.chef)
 changes the ssl_verify_mode to :verify_peer from the default :verify_none to get rid fo the warnings during provisioning
 
 #### Roles ####
-[metrics_vagrant/roles/app_server.rb](https://github.com/jawnhaas/metrics_vagrant/blob/master/roles/app_server.rb)
+[app_server.rb](https://github.com/jawnhaas/metrics_vagrant/blob/master/roles/app_server.rb)
 this is a role that setups up a basic app server which runs apache, mysql and PHP.
 
-[metrics_vagrant/roles/example.rb](https://github.com/jawnhaas/metrics_vagrant/blob/master/roles/example.rb)
+[example.rb](https://github.com/jawnhaas/metrics_vagrant/blob/master/roles/example.rb)
 this is a role that extends the app-server role and sets up the rjmetrics recipe
 
 #### Cookbooks ####
-[metrics_vagrant/my_cookbooks/rjmetrics/metadata.rb](https://github.com/jawnhaas/metrics_vagrant/blob/master/my_cookbooks/rjmetrics/metadata.rb)
+[metadata.rb](https://github.com/jawnhaas/metrics_vagrant/blob/master/my_cookbooks/rjmetrics/metadata.rb)
 is an overview of the cookbook listing the dependancies required for it to funciton. I downloaded the dependancies needed from [Chef Supermarket](https://community.opscode.com/cookbooks).
 
-[metrics_vagrant/my_cookbooks/rjmetrics/recipes/default.rb](https://github.com/jawnhaas/metrics_vagrant/blob/master/my_cookbooks/rjmetrics/recipes/default.rb)
+[default.rb](https://github.com/jawnhaas/metrics_vagrant/blob/master/my_cookbooks/rjmetrics/recipes/default.rb)
 this recipe creates the connection string, database, sets permissions, and imports a SQL file for data. The SQL import is done for for the sake of the demo, so it runs without additional configuration. Normally i would not include data imports in a configuration management system.
 
-[metrics_vagrant/my_cookbooks/rjmetrics/templates/default/site.conf.erb](https://github.com/jawnhaas/metrics_vagrant/blob/master/my_cookbooks/rjmetrics/templates/default/site.conf.erb)
+[site.conf.erb](https://github.com/jawnhaas/metrics_vagrant/blob/master/my_cookbooks/rjmetrics/templates/default/site.conf.erb)
 is a ruby erb template that is used to setup the vhost document root set via the Vagrantfile.
 
 ## Requirements ##
