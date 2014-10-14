@@ -5,8 +5,11 @@ This is a sample Vagrant configuration which provisions a server instance with P
 All files referenced are documented throughout, below is an overview of each file touched. To make the project easy to run, I manually downloaded all the cookbook dependancies. Normally, I would use a package management system like Library or Berkshire. 
 
 #### Vagrantfile ####
-[metrics_vagrant/VagrantFile](https://github.com/jawnhaas/metrics_vagrant/blob/master/Vagrantfile)
+[metrics_vagrant/Vagrantfile](https://github.com/jawnhaas/metrics_vagrant/blob/master/Vagrantfile)
 sets some configuration values in the chef.json section, sets document paths and base VM configuration.
+
+[metrics_vagrant/Vagrantfile.chef](https://github.com/jawnhaas/metrics_vagrant/blob/master/Vagrantfile.chef)
+changes the ssl_verify_mode to :verify_peer from the default :verify_none to get rid fo the warnings during provisioning
 
 #### Roles ####
 [metrics_vagrant/roles/app_server.rb](https://github.com/jawnhaas/metrics_vagrant/blob/master/roles/app_server.rb)
