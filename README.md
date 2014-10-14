@@ -37,4 +37,4 @@ is a ruby erb template that is used to setup the vhost document root set via the
 - Install the vagrant-omnibus plugin `vagrant plugin install vagrant-omnibus` to ensure the desired version of Chef is installed via the platform-specific Omnibus packages.
 - Run `vagrant up`
 
-Open up http://localhost:8080 in a browser.
+Open up [http://localhost:8080](http://localhost:8080) in a browser.
