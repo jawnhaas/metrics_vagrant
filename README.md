@@ -33,7 +33,9 @@ is a ruby erb template that is used to setup the vhost document root set via the
 - Vagrant ~1.1
 
 ## Setup ##
-First clone the metrics_example repository, and make that your working directory.
+- Clone the metrics_example repository and make that your working directory.
+- Install the vagrant-omnibus plugin to ensure the desired version of Chef is installed via the platform-specific Omnibus packages.
+- Run vagrant up
 
 	git clone https://github.com/jawnhaas/metrics_vagrant.git
     cd metrics_vagrant
