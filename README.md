@@ -16,7 +16,7 @@ this is a role that setups up a basic app server which runs apache, mysql and PH
 this is a role that extends the app-server role and sets the rjmetrics up recipe
 
 #### Cookbooks ####
-[metrics_vagrant/my_cookbooks/rjmetrics/metadata.rb](https://github.com/jawnhaas/metrics_vagrant/blob/master/cookbooks/rjmetrics/metadata.rb)
+[metrics_vagrant/my_cookbooks/rjmetrics/metadata.rb](https://github.com/jawnhaas/metrics_vagrant/blob/master/my_cookbooks/rjmetrics/metadata.rb)
 is an overview of the cookbook listing the dependancies required for it to funciton. I downloaded the dependancies needed from [Chef Supermarket](https://community.opscode.com/cookbooks).
 
 [metrics_vagrant/my_cookbooks/rjmetrics/recipes/default.rb](https://github.com/jawnhaas/metrics_vagrant/blob/master/my_cookbooks/rjmetrics/recipes/default.rb)
