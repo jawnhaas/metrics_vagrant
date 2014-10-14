@@ -2,7 +2,7 @@
 This is a sample Vagrant configuration which provisions a server instance with PHP, Apache and MySQL using Chef.
 
 ## Project ##
-All files referenced are documented throughout, below is an overview of each file touched. To make the project easy to run, I manually downloaded all the cookbook dependancies. Normally, I would use a package management system like Library or Berkshire. 
+All files referenced are documented throughout, below is an overview of each file touched. To make the project easy to run, I manually downloaded all the cookbook dependancies from [Chef Supermarket](https://community.opscode.com/cookbooks). Normally, I would use a package management system like Library or Berkshire. 
 
 #### Vagrantfile ####
 [Vagrantfile](https://github.com/jawnhaas/metrics_vagrant/blob/master/Vagrantfile)
@@ -20,7 +20,7 @@ this is a role that extends the app-server role and sets up the rjmetrics recipe
 
 #### Cookbooks ####
 [metadata.rb](https://github.com/jawnhaas/metrics_vagrant/blob/master/my_cookbooks/rjmetrics/metadata.rb)
-is an overview of the cookbook listing the dependancies required for it to funciton. I downloaded the dependancies needed from [Chef Supermarket](https://community.opscode.com/cookbooks).
+is an overview of the cookbook listing the dependancies required for it to funciton. 
 
 [default.rb](https://github.com/jawnhaas/metrics_vagrant/blob/master/my_cookbooks/rjmetrics/recipes/default.rb)
 this recipe creates the connection string, database, sets permissions, and imports a SQL file for data. The SQL import is done for for the sake of the demo, so it runs without additional configuration. Normally i would not include data imports in a configuration management system.
