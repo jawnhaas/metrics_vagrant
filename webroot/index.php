@@ -4,21 +4,23 @@
 </head>
 <body>
 <?php
-$con = mysqli_connect('localhost', 'root', 'd1fa4a7da52440d6a6e86e9780233271', 'rjmetrics');
+$con = mysqli_connect('localhost', 'root', 'ilikerandompasswords', 'rjmetrics');
 if (!$con) {
     die('Could not connect: ' . mysql_error());
 }
-$result = mysqli_query($con, "SELECT * from people");
+$result = mysqli_query($con, "SELECT * FROM people");
 ?><table>
     <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
+      <td><b>First Name</b></td>
+      <td><b>Last Name</b></td>
+      <td><b>Country</b></td>
     </tr>
 <?php
 while($row = mysqli_fetch_array($result)) {
   ?><tr>
       <td><?php echo $row['first_name'] ?></td>
-      <td><?php echo $row['first_name'] ?></td>
+      <td><?php echo $row['last_name'] ?></td>
+      <td><?php echo $row['country'] ?></td>
     </tr><?php
 }
 ?></table><?php

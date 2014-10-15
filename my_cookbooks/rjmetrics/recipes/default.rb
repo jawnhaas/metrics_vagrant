@@ -1,8 +1,7 @@
 # Setting mysql connection info
 mysql_connection_info = {
   :host     => 'localhost',
-  :username => 'root',
-  :password => node['mysql']['server_root_password']
+  :username => 'root'
 }
 
 # Creating mysql database
@@ -14,7 +13,6 @@ end
 # Setting permissions on the database
 mysql_database_user "root" do
   connection mysql_connection_info
-  password node['mysql']['server_root_password']
   database_name node['site']['database']
   host 'localhost'
   privileges [:select,:update,:insert, :delete]
@@ -23,7 +21,7 @@ end
 
 execute "import" do
   #command "mysql -u root -p"+node['mysql']['server_root_password'] +" rjmetrics < /data/people.sql"
-  command "mysql -u root -p"+node['mysql']['server_root_password']+" "+node['site']['database']+" < /data/people.sql"
+  command "mysql -u root "+node['site']['database']+" < /data/people.sql"
   action :run
 end
 
