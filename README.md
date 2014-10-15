@@ -16,7 +16,7 @@ changes the ssl_verify_mode to :verify_peer from the default :verify_none to get
 this is a role that setups up a basic app server which runs apache, mysql and PHP.
 
 [example.rb](https://github.com/jawnhaas/metrics_vagrant/blob/master/roles/example.rb)
-this is a role that extends the app-server role and rus the rjmetrics recipe to demonstrate extending other roles.
+this is a role that extends the app-server role and runs the rjmetrics recipe to demonstrate extending other roles.
 
 #### RjMetrics Cookbook ####
 [metadata.rb](https://github.com/jawnhaas/metrics_vagrant/blob/master/my_cookbooks/rjmetrics/metadata.rb)
