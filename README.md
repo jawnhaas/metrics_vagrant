@@ -29,7 +29,7 @@ this recipe creates the connection string, database, sets permissions, and impor
 is a ruby erb template used to setup the vhost document root set in the chef.json portion of the Vagrantfile.
 
 ## Requirements ##
-- Virtual Box
+- VirtualBox
 - Vagrant ~1.1
 
 ## Setup ##
