@@ -4,7 +4,7 @@
 </head>
 <body>
 <?php
-$con = mysqli_connect('localhost', 'root', 'ilikerandompasswords', 'rjmetrics');
+$con = mysqli_connect('localhost', 'root', '', 'rjmetrics');
 if (!$con) {
     die('Could not connect: ' . mysql_error());
 }
