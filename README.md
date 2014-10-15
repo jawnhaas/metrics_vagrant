@@ -23,7 +23,7 @@ this is a role that extends the app-server role and runs the rjmetrics recipe to
 is an overview of the cookbook and a list of the dependancies required for it to run. 
 
 [default.rb](https://github.com/jawnhaas/metrics_vagrant/blob/master/my_cookbooks/rjmetrics/recipes/default.rb)
-this recipe creates the connection string, database, sets permissions, and imports a SQL file for data. **The SQL import is done for for the sake of the demo, so it runs without additional configuration. Normally i would not include data imports in a configuration management system.
+this recipe creates the connection string, database, sets permissions, and imports a SQL file for data. **The SQL import is done for for the sake of the demo, so it runs without additional configuration. Normally data would be imported from a dump manually.
 
 [site.conf.erb](https://github.com/jawnhaas/metrics_vagrant/blob/master/my_cookbooks/rjmetrics/templates/default/site.conf.erb)
 is a ruby erb template used to setup the vhost document root set in the chef.json portion of the Vagrantfile.
