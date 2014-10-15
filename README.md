@@ -33,7 +33,7 @@ is a ruby erb template used to setup the vhost document root set in the chef.jso
 - Vagrant ~1.1
 
 ## Setup ##
-1. Go into metrics_vagrant/Vagrantfile and add a password to the line under the chef.json configuration change  `"mysql" => {"server_root_password" => ""}` to include a password. E.g. `"mysql" => {"server_root_password" => "asdf"}` 
+1. Go into metrics_vagrant/Vagrantfile and add a password for mysql to the line under the chef.json configuration change  `"mysql" => {"server_root_password" => ""}` to include a password. E.g. `"mysql" => {"server_root_password" => "asdf"}` 
 2. Clone the metrics_vagrant repository `git clone https://github.com/jawnhaas/metrics_vagrant.git` and make that your working directory `cd metrics_vagrant`
 3. Install the vagrant-omnibus plugin `vagrant plugin install vagrant-omnibus` to ensure the desired version of Chef is installed via the platform-specific Omnibus packages.
 4. Run `vagrant up`
